@@ -1,0 +1,63 @@
+/******************************************************************************
+
+Autor:  Nicolle Zapata Monsalve
+Fecha:  2024-06-06
+Descripcion:  Toy Story
+     Los juguetes de Andy están 
+     jugando a las escondidas. Pide al 
+     usuario las ubicaciones donde buscar 
+     y usa estructuras "si" para determinar 
+     si los juguetes están en la ubicación 
+     correcta o no. Reportar la cantidad 
+     total de juguetes que fueron encontrados 
+     al finalizar 4 rondas.
+*******************************************************************************/
+
+using System;
+class HelloWorld {
+  static void Main() {
+        //variables
+    int juguetesEncontrados = 0;  
+    
+    // estructura repetitiva o ciclicla
+    int i = 0;
+    while (i < 4){
+
+   // preguntar ubicaciones al usuario
+    Console.WriteLine("Ronda " + (i) + " ¿Donde deberiamos buscar?");
+    Console.WriteLine("Opciones: sala, dormitorio, cocina, patio, garaje");
+    string lugar = Console.ReadLine().ToLower();
+    
+    // validar ubicaciones con estructura IF
+    if (lugar == "dormitorio") {
+        Console.WriteLine("¡Encontramos un juguete en el dormitorio!");
+        juguetesEncontrados++;
+    }
+    else if (lugar == "sala") {
+        Console.WriteLine("Encontramos dos jugutes en la sala");
+        juguetesEncontrados++;
+        juguetesEncontrados++;
+    }
+    
+    else if  (lugar == "garaje"){ 
+        Console.WriteLine("No encontramos un juguete en el garaje");
+    }
+    
+    else if (lugar == "cocina") {
+        Console.WriteLine("Encontramos un juguete en la cocina");
+        juguetesEncontrados++;
+    }
+    
+     else if (lugar == "patio") {
+        Console.WriteLine(" no encontramos un juguete en el patio");
+     }
+     
+     else {
+         Console.WriteLine("ubicacion no valida");
+     }
+     i++;
+    }
+     Console.WriteLine("Total de juguetes encontrados: " + juguetesEncontrados);
+
+    }
+    }
